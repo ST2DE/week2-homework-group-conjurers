@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Conjurers</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
+      <a class="navbar-brand mb-0 h1" href="index.html"> Conjurers </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Claire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Syuan</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="janice.html">Janice</a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-outline-warning mx-auto mr-5" id="openNote" >Git 操作筆記</button>
+        </div>
+      </div>
+      <hr>
+      <div class="alert alert-light content" role="alert">
+        <div class="col-12">
+          <img src="public/paper-plane.png" <h6> 如何開始一個 Git Respository</h6>
+          <ul>
+            <li>在專案底下使用 git init 開始一個新的 Git repo.</li>
+            <li>使用 git clone 複製一個專案</li>
+          </ul>
+          <img src="public/paper-plane.png" <h6> 如何將檔案提交(commit)</h6>
+          <ul>
+            <li>使用 git commit會將 Stage 狀態的檔案做 Commit 動作</li>
+            <li>git commit -m "commit訊息" 可以略過編輯器直接輸入 commit 訊息完成提交</li>
+            <li>git commit -am "commit訊息" 等同於先git add .後略過編輯器提交 commit</li>
+          </ul>
+          <img src="public/paper-plane.png" <h6> 如何修改/取消上一次的 commit</h6>
+          <ul>
+            <li>git commit --amend 修改上一次的 commit 訊息。</li>
+            <li>git commit --amend file1 file2 ... 將檔案1、檔案2加入上一次的 commit。</li>
+            <li>git reset HEAD^ --soft 取消剛剛的 commit，但保留修改過的檔案。</li>
+            <li>git reset HEAD^ --hard 取消剛剛的 commit，回到再上一次 commit的 乾淨狀態</li>
+          </ul>
+          <img src="public/paper-plane.png" <h6> FAQ</h6>
+          <p>我的 code 改爛了我想全部重來，我要如何快速回到乾淨的目錄?<br>
+              → git reset --hard 這指令會清除所有與最近一次 commit 不同的修改。
+          </p>
+          <p>如何回復單獨檔案到原本 commit 的狀態?<br>
+              → git checkout 檔案名稱 這指令會將已經被修改過的檔案回復到最近一次 commit 的樣子。
+          </p>
+          <h6>基本指令 -透過 gitshell 建立 Repository</h6>
+          <div class="alert alert-warning">
+            <p>$ git init<br>
+            $ git add README<br>
+            $ git status<br>
+            $ git commit -m "First Commit"</p>
+          </div>
+          <h6>常用指令</h6>
+          <div class="alert alert-warning">
+            <p>$ git status # 查看發生改動的文件列表<br>
+              $ git checkout . # 取消所有修改<br>
+              $ git checkout xxxFile # 取消某個文件的修改<br>
+              $ git add . # 新增所有修改<br>
+              $ git commit -m 'commit message' # 提交修改<br>
+              $ git push # 提交程式碼到遠程分支, 預設使用 origin 作為名稱<br>
+              $ git pull # 從遠程倉庫獲取最新程式碼<br>
+
+              $ git checkout branch-name # 切換到 xxx branch, -b 新建並切換到分支<br>
+              $ git merge branch-name # 將 XXX 分支 merge 到當前分支<br>
+              $ git help xxxCmd # 查看幫助文件, 會用瀏覽器打開 html 文件<br>
+              $ git config --global user.name "User-Name" # Git 設定, --global 全局生效</p>
+          </div>
+          <h6>多人共同編輯檔案時的常用指令</h6>
+          <div class="alert alert-warning">
+            <p>$ git checkout -b branch-name新建並切換到分支<br>
+              $ git branch # 查看本地分支, -r 查看遠程分支, -a 查看所有<br>
+              $ git fetch # 從遠程獲取 branch/tag 訊息,同步 branch紀錄<br>
+              $ git merge XXX # 將 xxx branch merge 到當前分支
+              $ git rebase</p>
+          </div>  
+        </div>           
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+     <script src="js/janice.js"></script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta name="description" content="">
+                    <meta name="author" content="">
+                        
+                        <title>Conjurers</title>
+                        
+                        <!-- Bootstrap core CSS -->
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                            
+                            <!-- Custom styles for this template -->
+                            <link href="cover.css" rel="stylesheet">
+                                </head>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
+        <a class="navbar-brand mb-0 h1" href="index.html"> Conjurers </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="claire.html">Claire</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Syuan</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="janice.html">Janice</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+          
+                <button type="button" class="btn btn-outline-warning mx-auto mr-5" id="openNote" >Git 操作筆記(Claire)
+                </button>
+                <img width="300" height="200"   src="public/conan.png">
+            </div>
+        </div>
+        <hr>
+        <div class="alert alert-light content" role="alert">
+            <div class="col-12">
+                <img src="public/paper-plane.png" <h6> Reference:
+                    * Article</h6>
+                    <ul>
+                        <li>[Learn-Git-in-30-days](https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/01.md)</li>
+                        <li>[Git 簡易使用教學](https://coderwall.com/p/yl1-ug/git--2)</li>
+                    </ul>
+                    <img src="public/paper-plane.png" <h6>
+                        Git 版本控管</h6>
+                        <p>
+                        在軟體開發領域，對原始碼進行版本控管是非常重要的一件事，有別於 Subversion 或 TFVC (Team Foundation Version Control) 這類集中式版本控管系統，Git 是一套分散式版本控管系統(DVCS; Distributed Version Control System)，並帶來許多版本控管上的各種優勢與解決傳統集中式版本控管的缺失，例如支援本地操作、備份容易、功能強大且彈性的分支與合併等等。不過，由於 Git 版本控管無論在版控觀念與工具使用上，都與傳統集中式版控工具差異甚大，因此造成了不小的學習門檻。
+                        </p>
+                        <img src="public/paper-plane.png" <h6>
+                          安裝設定 Git</h6>
+                          <p>其中請特別注意設定好提交者的 name 及 Email，Git 會記錄每個 commit 是由誰提交的，這在版本控制上是很重要的資訊。我們可以使用以下的指令來進行設定：（--global</code> 表示是全域設定）</p>
+                          
+                          <div class="alert alert-warning">
+                              <p>$ git config --global user.name "claire<br>
+                             $ git config --global user.email "cla022318@yahoo.com.tw"</p>
+                          </div>
+                       
+                       
+                       <img src="public/paper-plane.png" <h6> 檢查是否成功設定</h6>
+                           
+                           <div class="alert alert-warning">
+                               <p>$ git config --list<br>
+                           user.name=claire<br>
+                           user.email=cla022318@yahoo.com.tw<br></p>
+                           </div>
+                           
+                           <img src="public/paper-plane.png" <h6>  開始使用 Git：將現有專案CLONE下來</h6>
+                
+                <p>當團隊中有人已開啟了一個在 Git Server 上的 Git Repository，那我們就可以使用 Git clone 來將這個 Repository 抓來自己的 local 端一起進行開發。<br>
+                Clone with HTTPS<br>
+                找到 Git Repository 的位址，在terminal上，使用指令git clone進行 Clone：<br></p>
+                <div class="alert alert-warning">
+                    <p>$ git clone git@github.com:fukuball/Hello-World.git<br></p>
+                    </div>
+                
+                 <img src="public/paper-plane.png" <h6>  建立自己的專案</h6>
+                     <p>
+                     mac版本中，可以開啟terminal，輸入以下指令建立xxx檔案
+                                </p>
+                                <div class="alert alert-warning">
+                                    <p>$   mkdir week1<br>
+                                    $   cd week1<br>
+                                    $   touch xxx.md<br></p>
+                                     </div>
+                                    <h6>git init (建立儲存庫 => git repository)
+</h6>
+                                    
+                                <div class="alert alert-warning">
+                                    <p>$ git init<br>
+                                    
+                                   Initialized empty Git repository in /Users/Claire/week1/.git/</p>
+                                </div>
+                                
+                                
+                                <h6>git status</h6>
+                                <p>可以使用 git status 來觀察 Git Repository 的狀態，比如目前所在的 branch 及 哪些檔案還沒 commit 等等</p>
+                                <div class="alert alert-warning">
+                                    <p>$ git status<br>
+                                    # On branch master<br>
+                                    nothing to commit, working directory clean<br></p>
+                                </div>
+                                
+                                
+                                
+                                <img src="public/paper-plane.png" <h6> 進入暫存區(git add)</h6>
+                                    <p>
+                                    使用 git add 可以將新增檔案加入 git 版本控制
+
+                                    </p>
+                                    <div class="alert alert-warning">
+                                        <p>$   git add xxx.md
+                                        <br>
+                                        </p> </div>
+                                        
+                                        <h6>如果add或commit之後反悔?
+                                        </h6>
+                                        <p>
+                                        [如何將檔案從stage移除？](http://oomusou.io/git/remove-stage/)<br>
+                                        
+                                        <ol>
+                                            <li>若該檔案不在repository內: git rm –cached 檔案名稱
+                                       <li> 若檔案已經在repository內: git reset HEAD 檔案名稱
+                                        </ol>
+                                        
+                                        <div class="alert alert-warning">
+                                            <p>$ git init<br>
+                                            
+                                            Initialized empty Git repository in /Users/Claire/week1/.git/</p>
+                                        </div>
+                                        
+                                        
+                                        <h6>git rm –cached</h6>
+                                        <p>先了解git rm --cached的背後原理 :
+                                    <ol>
+                                        <li>若檔案存在於stage與repository時，會將檔案從repository刪除，並且從stage刪除，但不會刪除working directory的實際檔案，不過由於檔案已經從repository刪除，檔案會從tracked變成untracked。<br>
+                                        
+                                       <li> 2.若檔案存在於stage，卻不存在於repository，會將檔案從stage刪除，但不會刪除working director的實際檔案，因為repository本來就沒有這個檔案，所以一樣是untracked不變。</ol>
+                                        
+                                        回想我們的狀況 :
+                                       <ol>
+                                        <li>若該檔案不在repository內 : git rm --cached會幫我們從stage刪除，且檔案本來就是untracked，執行完還是untracked，符合我們的預期。<br>
+                                        
+                                        <li>若檔案已經在repository內 : git rm --cached會幫我們從repository刪除，並且從stage刪除，因為已經從repository刪除檔案，檔案會從tracked變成untracked，這並不是我們預期的。</ol>
+                                        
+                                        <br>這解釋了為什麼當檔案不在repository時，必須下git rm --cached</p>
+                                     
+                           
+                                            <h6>git commit (commit)$ git status<h6>
+                                           <p>
+                                           stage 狀態的檔案，下一步就是準備提交，一個 commit 在 Git 中就是一個節點，這些 commit 的節點就是未來可以回朔及追蹤的參考。<br>
+                                           當檔案都加入到 stage 了，那就可以使用以下指令來 commit：</p>
+                                           <div class="alert alert-warning">
+                                               <p>$ git commit -m "你要告訴他人的內容"<br>    </p>
+                                           </div>
+                                           
+                                <p>
+                                每個 commit 有個適當的描述是非常重要的，這樣要回朔時會比較容易查找。<br>
+                                </p>
+                                <div class="alert alert-warning">
+                                    <p>
+                                    $   git commit   -m   'Add a about_me.html'<br>
+                                    
+                                    
+                                    \[master   (root-commit)   0dc97a8\]  Add a about_me.html.<br>
+                                    
+                                    1   file changed,   0   insertions(+),   0   deletions(-)<br>
+                                    
+                                    create mode   100644  about_me.html<br>
+                                </p></div>
+                                
+                                <p>加上commit 訊息</p>
+                                <div class="alert alert-warning">
+                                    <p>
+                              $ git commit -m "init commit"。<br>
+                               $ git add missing.py<br>
+                                $ git commit --amend<br></p>
+                                </div>
+                                
+                                
+                                
+                                <img src="public/paper-plane.png" <h6>
+                                    Git log</h6>
+                                            <p>
+                                            
+                                            我們可以使用 `git log` 的指令查看過去 commit 的紀錄，例如 commit 的版號、作者等等。
+                                            </p>
+                                            <img src="public/paper-plane.png" <h6>
+                                                安裝設定 Git</h6>
+                                            < <div class="alert alert-warning">
+                                            <p>$   git log<br>
+                                            commit 7d2667e09197461db0a8bc74e8bfcF42bf185ccf2<br>
+                                            Author: claire <cla022318@yahoo.com.tw><br>
+                                                Date:   Fri Mar 23 00:27:57 2018 +0800
+</p></div>
+
+                                            <h6>git push</h6>
+                                       <p>當已經連結了 Git Server，就可以用 git push 來將 local 端的 commit 更新到 Server 上，請注意有修改的檔案還沒 commit 那就無法使用 git push，所以一定要將所有更新都 commit 之後，才有辦法使用 git push。
+                                                </p>
+                                            
+                                            <div class="alert alert-warning">
+                                                <p>$ git push<br>
+                                                </p>
+                                            </div>
+                                            
+                                            <img src="public/paper-plane.png" <h6>git pull</h6>
+                                                <p>當已經連結了 Git Server，我們就可以使用 git pull 來將遠端更新的 code 抓回來，同樣如果 local 端有任何更新，一定都要 commit 之後才
+                                                有辦法使用 git pull。</p>
+                                                <div class="alert alert-warning">
+                                                    <p>$ git pull<br>
+                                               
+                                                    $ git pull origin master<br></p>
+                                                </div>
+                                                
+                                                <img src="public/paper-plane.png" <h6> .gitignore
+</h6>
+                                                    
+                                                    <p>log 檔及 build 出來的檔案及系統產生的檔案如 .DS_Store 等等，我們並不需要 commit 上去 Repository，所以我們會在 Repository 編寫一個 .gitignore 文字檔來忽略這些檔案。<br>
+                                                    
+                                                    範例 .gitigore 如下：</p>
+                                                    
+                                                    <div class="alert alert-warning">
+                                                        <p>
+                                                        .DS_Store<br>
+                                                        *.log<br></p>
+                                                    </div>
+                                                    
+                                
+                                </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/janice.js"></script>
+    </body>
+</html>
+

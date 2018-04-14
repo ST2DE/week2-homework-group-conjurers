@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Conjurers</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet"> </head>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color"> <a class="navbar-brand mb-0 h1" href="index.html"> Conjurers </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="claire.html">Claire</a> </li>
+            <li class="nav-item active"> <a class="nav-link" href="Syuan.html">Syuan</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="janice.html">Janice</a> </li>
+        </ul>
+    </div>
+</nav>
+<!-- content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-outline-warning mx-auto mr-5" id="openNote">Git 操作筆記</button>
+        </div>
+    </div>
+    <hr>
+    <div class="alert alert-light content" role="alert">
+        <div class="col-12"> <img src="public/paper-plane.png" <h6>什麼是git?</h6> 
+            <ul>
+                <li>Git 是一個分散式版本控制軟體，最初由 Linus Torvalds 創作（也是作業系統 Linux 系統的開發者），其最初目的是為更好地管理 Linux kernel 開發而設計，其具備優秀的 merge tracing 合併程式碼的能力（使用程式碼 snapshot 來比較歷史版本差異）。</li>
+            </ul> <img src="public/paper-plane.png" <h6> 什麼是github?</h6>
+            <ul>
+                <li>Github 則是一個支援 git 程式碼存取和遠端托管的平台服務，有許多的開放原始碼的專案都是使用 Github 進行程式碼的管理。</li>
+            </ul> <img src="public/paper-plane.png" <h6> git的基本概念</h6>
+            <ul> <img src="https://blog.techbridge.cc/img/kdchang/cs101/git-workflow.png" alt="">
+                <li>Git 可以分為 Local（本地）和 Remote（遠端）兩個環境，由於 Git 屬於分散式的版本控制系統，所以開發者可以在離線 local 環境下開發，等到有網路時再將自己的程式推到 Remote 環境或 pull 下其他開發者程式碼進行整合。在 Local 中又分為 working directory（工作資料夾）、staging area（暫存區）和 repositories（檔案庫）。</li> <img src="https://i.imgur.com/hz8u4xw.png" alt="">
+                <li>Git有三種表達檔案的狀態：已提交(committed)、已修改(modified)及已暫存(staged)。 基本Git工作流程大致如下：
+                    <ul>
+                        <li>修改工作目錄內的檔案</li>
+                        <li>暫存檔案，將檔案的快照新增到暫存區域</li>
+                        <li>做提交的動作，這會讓存在暫存區域的檔案快照永久地儲存在Git目錄。</li>
+                    </ul>
+                </li>
+            </ul> <img src="public/paper-plane.png" <h6> git的基本指令</h6>
+            <ol>
+                <li> 設定使用者資訊</li>
+                <div class="alert alert-warning"> <pre><code>$ git config --global user.name "使用者名稱"
+$ git config --global user.email "信箱"
+#查看設定內容
+$ git config --list
+</code></pre> </div>
+                <li> 開始使用git</li>
+                <div class="alert alert-warning"> <pre><code>#建立一個新的Git Repository
+$ git init
+#複製別人的Git Repository
+$ git clone https://github.com/ST2DE/wee1-homework-chloe8599.git
+#生一個新branch
+git branch [branch-name] 
+#切換到此branch上
+git checkout [branch-name] </code></pre> </div>
+                <li>檔案修改後的整理</li>
+                <div class="alert alert-warning"> <pre><code>git status #看修改了哪些檔案
+git add [修改到的檔案]     
+git commit -m [註解]
+#不斷重複步驟直到 git status 顯示沒有任何修改過的檔案</code></pre></div>
+                <li>上傳至遠端</li>
+                <div class="alert alert-warning"> <pre><code>git checkout master
+git merge [branch-name] #和master merge
+git push</code></pre></div>
+            </ol>
+        
+        </div></div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="js/janice.js"></script>
+        </body>
+
+</html>
